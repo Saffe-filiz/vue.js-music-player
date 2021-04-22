@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Player</title>
+	<link rel="stylesheet" type="text/css" href="music_player.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	<script src="app.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="header">
+					<span class="show_play_list">
+						<button @click="show_list = !show_list">
+							<img src="./assets/icons/list.svg">
+						</button>
+					</span>
+				<span class="title">
+					<h2>{{song_list[index].name | artist_control}}</h2>
+					<p>{{song_list[index].artist | artist_control}}</p>
+				</span>
+			</div>
+			<div :class="[show_list ? 'show_list':'']">
+				<div class="music_list">
+					<div class="music_list_title">
+				            <h2>Playlist ( {{song_list.length}} )</h2>
+			            </div>
+		            <div class="list">
+				        <list 
+				        v-for="(song, index) in song_list"  
+				        :key="index" 
+				        :index="index"
+				        :song="song" 
+				        @show_list="show_list = $event"
+				        @selected_song="current_index = $event"
+				        />
+					</div>
+	            </div>
+			</div>
+			<div :class="[show_list ? 'show_list':'']">
+				<player 
+				@favori="song_list[index].favorited = $event"
+				@counter="current_index = $event"
+				:audio="audio"
+				:corrent_song="corrent_song"
+				:current_index="current_index"
+				:song_detail="song_list[index]">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
