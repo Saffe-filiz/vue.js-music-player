@@ -180,50 +180,49 @@ const app = new Vue({
 		current_index: 0,
 		index: 0,
 		show_list: false,
-		song_list: [{
-          name: "Everybody Knows",
-          artist: "Leonard Cohen",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          url: "https://www.youtube.com/watch?v=Lin-a2lTelg",
-          favorited: false
-        },
-        {
-          name: "Extreme Ways",
-          artist: "Moby",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          favorited: false
-        },
-        {
-          name: "Butterflies",
-          artist: "Sia",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          favorited: false
-        },
-        {
-          name: "The Final Victory",
-          artist: "Haggard",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          favorited: false
-        },
-        {
-          name: "Genius ft. Sia, Diplo, Labrinth",
-          artist: "LSD",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          favorited: false
-        }, 
-        {
-          name: "The Comeback Kid",
-          artist: "Lindi Ortega",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          favorited: false
-        }]
-	},
+	        song_list: [{
+                   name: "The Idol",
+                   artist: "W.A.S.P",
+                   cover: "./assets/img/wasp_the_idol.jpg",
+                   source: "./assets/mp3/The Idol.mp3",
+                   favorited: false
+                 },
+                 {
+                   name: "Wild Child",
+                   artist: "W.A.S.P",
+                   cover: "./assets/img/wasp_wilde_child.jpg",
+                   source: "./assets/mp3/Wild Child.mp3",
+                   favorited: false
+                 },
+                 {
+                   name: "Johnny B. Goode",
+                   artist: "Judas Prist",
+                   cover: "./assets/img/judas_prist_ram_it_down.jpg",
+                   source: "./assets/mp3/Johnny B. Goode.mp3",
+                   favorited: false
+                 },
+                 {
+                   name: "Night Crawler",
+                   artist: "Judas Prist",
+                   cover: "./assets/img/judas_priest_painkiller.jpg",
+                   source: "./assets/mp3/Night Crawler.mp3",
+                   favorited: false
+                 },
+                 {
+                  name: "Love Bites",
+                  artist: "Def Leppart",
+                  cover: "./assets/img/def_leppard_hysteria.jpg",
+                  source: "./assets/mp3/Love Bites.mp3",
+                  favorited: false
+                }, 
+                {
+                  name: "Too late For Love",
+                  artist: "Def Leppart",
+                  cover: "./assets/img/def_leppard_pyromania.jpg",
+                  source: "./assets/mp3/Too late For Love.mp3",
+                  favorited: false
+                }]
+	       },
 
 	computed: {
 		corrent_song () {
